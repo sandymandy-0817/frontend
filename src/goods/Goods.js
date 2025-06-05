@@ -13,7 +13,7 @@ function Goods(props) {
 
     const loadData = () => {
         axios
-        .get('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods')
+        .get('backend/goods')
         .then(res=>{
             setItem(res.data)
             setGoodsCount(res.data.length);
@@ -29,7 +29,7 @@ function Goods(props) {
         console.log('삭제할 g_code:', g_code);
         if(window.confirm('정말 삭제하시겠습니까?')) {
             axios
-                .delete(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/goods/${g_code}`)
+                .delete(`backend/goods/goods/${g_code}`)
                 .then(() => {
                     alert('삭제되었습니다');
                     loadData();
