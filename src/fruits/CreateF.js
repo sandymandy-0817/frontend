@@ -22,7 +22,7 @@ const CreateF = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:9070/fruits', form)
+        axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/fruits', form)
             .then(()=>{
                 alert('상품이 등록 되었습니다');
                 navigate('/fruits');
