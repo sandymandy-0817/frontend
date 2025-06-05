@@ -34,7 +34,7 @@ function UpdateF(props) {
     const handleSubmit=(e)=>{  
         e.preventDefault();
     
-        axios.put(`http://localhost:9070/fruits/update/${num}`,{
+        axios.put(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/fruits/update/${num}`,{
             name:form.name, 
             price:form.price,
             color:form.color, 
