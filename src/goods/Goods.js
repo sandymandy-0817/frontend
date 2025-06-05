@@ -13,7 +13,7 @@ function Goods(props) {
 
     const loadData = () => {
         axios
-        .get('http://localhost:9070/goods')
+        .get('backend/goods')
         .then(res=>{
             setItem(res.data)
             setGoodsCount(res.data.length);
