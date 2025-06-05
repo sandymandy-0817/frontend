@@ -12,7 +12,7 @@ function Fruits(props) {
 
     const loadData = () => {
         axios
-        .get('http://localhost:9070/fruits')
+        .get('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/fruits')
         .then(res=>{
             setItem(res.data)
             setFruitsCount(res.data.length);
