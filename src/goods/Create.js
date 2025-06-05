@@ -19,7 +19,7 @@ function Create(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:9070/goods', form)
+        axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods', form)
             .then(()=>{
                 alert('상품이 등록 되었습니다');
                 navigate('/goods');
