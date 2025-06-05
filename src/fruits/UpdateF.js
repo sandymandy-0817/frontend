@@ -16,7 +16,7 @@ function UpdateF(props) {
     const navigate = useNavigate();
 
     useEffect (()=> {
-        axios.get(`http://localhost:9070/fruits/${num}`)
+        axios.get(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/fruits/${num}`)
         .then(res=> {
             console.log('서버 응답값 : ', res.data);
             setForm(res.data);
