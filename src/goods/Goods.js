@@ -13,7 +13,7 @@ function Goods(props) {
 
     const loadData = () => {
         axios
-        .get('backend/goods')
+        .get('backend:9070/goods')
         .then(res=>{
             setItem(res.data)
             setGoodsCount(res.data.length);
@@ -29,7 +29,7 @@ function Goods(props) {
         console.log('삭제할 g_code:', g_code);
         if(window.confirm('정말 삭제하시겠습니까?')) {
             axios
-                .delete(`backend/goods/goods/${g_code}`)
+                .delete(`backend:9070/goods/${g_code}`)
                 .then(() => {
                     alert('삭제되었습니다');
                     loadData();
