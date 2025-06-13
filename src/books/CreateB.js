@@ -25,7 +25,7 @@ function CreateB(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/books', form)
+        axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/books', form)
             .then(()=>{
                 alert('주문 내역이 등록 되었습니다');
                 navigate('/books');

@@ -21,7 +21,7 @@ function Login(props) {
         e.preventDefault();
         // console.log(login.id, login.password);
         try{
-            const res = await axios.post('http://localhost:9070/login', login);
+            const res = await axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/login', login);
             localStorage.setItem('token', res.data.token); //사용자 인증이 끝나면 '토큰' 발급
             alert('로그인 성공');
             navigate('/');

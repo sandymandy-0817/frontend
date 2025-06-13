@@ -33,7 +33,7 @@ function Update(props) {
     const handleSubmit=(e)=>{  
         e.preventDefault();
     
-        axios.put(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/${g_code}`,{
+        axios.put(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/update/${g_code}`,{
           g_name:form.g_name, //상품명 저장
           g_cost:form.g_cost //상품가격 저장
         })

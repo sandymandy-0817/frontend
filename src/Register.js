@@ -24,7 +24,7 @@ function Register(props) {
             setError('비밀번호가 일치하지 않습니다');
             return;
         } try {
-            const res = await axios.post('http://localhost:9070/register', {
+            const res = await axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/register', {
                 username: signIn.username,
                 password: signIn.password
             });

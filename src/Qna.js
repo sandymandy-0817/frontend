@@ -17,7 +17,7 @@ function Qna({ fetchQnaCount }) {
     const handleSubmit = async e => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:9070/qna', formData);
+            await axios.post('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/qna', formData);
             alert('질문이 등록되었습니다');
             setFormData({name:'', tel: '', email: '', content: ''});
             if (fetchQnaCount) fetchQnaCount(); // 등록 성공 시 개수 갱신

@@ -12,7 +12,7 @@ function Books(props) {
 
     const loadData = () => {
         axios
-        .get('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/books')
+        .get('https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/books')
         .then(res=>{
             setItem(res.data)
             setBooksCount(res.data.length);
@@ -28,7 +28,7 @@ function Books(props) {
         console.log('삭제할 num:', num);
         if(window.confirm('정말 삭제하시겠습니까?')) {
             axios
-                .delete(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/${num}`)
+                .delete(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/books/${num}`)
                 .then(() => {
                     alert('삭제되었습니다');
                     loadData();
