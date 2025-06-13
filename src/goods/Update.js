@@ -15,7 +15,7 @@ function Update(props) {
     const navigate = useNavigate();
 
     useEffect (()=> {
-        axios.get(`backend/goods/${g_code}`)
+        axios.get(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/goods/${g_code}`)
         .then(res=> {
             console.log('서버 응답값 : ', res.data);
             setForm(res.data);
@@ -33,7 +33,7 @@ function Update(props) {
     const handleSubmit=(e)=>{  
         e.preventDefault();
     
-        axios.put(`backend/${g_code}`,{
+        axios.put(`https://port-0-backend-mbha4admd1f88f85.sel4.cloudtype.app/${g_code}`,{
           g_name:form.g_name, //상품명 저장
           g_cost:form.g_cost //상품가격 저장
         })
